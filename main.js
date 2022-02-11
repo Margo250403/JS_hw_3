@@ -1,20 +1,23 @@
+"use strict";
+
 var phone_number = prompt("Введите ваш номер телефона:");
 
-//enter "+"
-
-// if(phone_number[0] === 43){
-//      console.log(phone_number)
-// }
-// else{
-//      alert("Номер телефона должен начинаться на +")
-// }
 
 //enter 13 chars 
 if (phone_number.length === 13) {
-     console.log(phone_number)
+     console.log(code)
 }
 else {
-     alert("Номер телефона должен быть длиной 13 символов")
+     alert("Поле не должно быть пустым и должно содержать 13 символов")
+}
+
+//enter "+"
+var plus = phone_number[0]
+if (plus === "+") {
+     console.log(code)
+}
+else {
+     alert("Телефон должен вводться в формате +000000000000")
 }
 
 //only numbers
@@ -22,7 +25,7 @@ var isError = false
 
 for (var char of phone_number) {
      var code = char.charCodeAt()
-     if (code < 48 || code > 57 ) {
+     if (plus === 43 && code < 48 || code > 57) {
           isError = true;
           break;
      }
@@ -30,6 +33,6 @@ for (var char of phone_number) {
 }
 
 if (isError) {
-     alert("Введите только числа, пожалуйста")
+     alert("Номер телефона должен состоять только из цифр и плюса в начале")
 }
 
