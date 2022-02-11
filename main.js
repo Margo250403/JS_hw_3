@@ -5,7 +5,7 @@ var phone_number = prompt("Введите ваш номер телефона:");
 
 //enter 13 chars 
 if (phone_number.length === 13) {
-     console.log(code)
+     console.log()
 }
 else {
      alert("Поле не должно быть пустым и должно содержать 13 символов")
@@ -14,7 +14,7 @@ else {
 //enter "+"
 var plus = phone_number[0]
 if (plus === "+") {
-     console.log(code)
+     console.log()
 }
 else {
      alert("Телефон должен вводться в формате +000000000000")
